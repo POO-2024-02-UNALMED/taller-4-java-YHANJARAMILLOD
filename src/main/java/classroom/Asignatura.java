@@ -14,14 +14,11 @@ public class Asignatura {
         
     }
     //usa un constructor con 1 parametro y lo pone como cero, puede ser el problema que uno de 1 se repite
-
-    public Asignatura(int codigoInterno,Tipo tipo) {
-        this("Sin nombre", codigoInterno, 0,tipo);
+    public Asignatura(double codigoInterno,Tipo tipo) {
+        this("Sin nombre", (int)codigoInterno, 0,tipo);
     }
-        //elimina uno tiene la misma firma o modifica los parametros
 
-
-    public Asignatura(Tipo tipo, int codigoExterno) {
+    public Asignatura(int codigoExterno,Tipo tipo) {
         this("Sin nombre", 0, codigoExterno,tipo);
     }
 
@@ -43,10 +40,9 @@ public class Asignatura {
         this.tipo = tipo;
     }
 
- /*    public void cambiarDatos(int codigoInterno) {
-        this.codigoInterno = codigoInterno;
-    }*/
-    //elimina uno tiene la misma firma o modifica los parametros
+    public void cambiarDatos(double codigoInterno) {
+        this.codigoInterno = (int) codigoInterno;
+    }
 
     public void cambiarDatos(int codigoExterno) {
         this.codigoExterno = codigoExterno;
