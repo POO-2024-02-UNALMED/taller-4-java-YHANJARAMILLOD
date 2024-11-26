@@ -9,15 +9,19 @@ public class Asignatura {
     public Tipo tipo;
 
     public Asignatura() {
-        this("Sin nombre",Tipo.FUNDAMENTACION);
-        this(0);
+        /*this(0);*/
+        this("Sin nombre",Tipo.FUNDAMENTACION);//uno de los dos ejecutare pero no los dos
+        
     }
+    //usa un constructor con 1 parametro y lo pone como cero, puede ser el problema que uno de 1 se repite
 
     public Asignatura(int codigoInterno,Tipo tipo) {
         this("Sin nombre", codigoInterno, 0,tipo);
     }
+        //elimina uno tiene la misma firma o modifica los parametros
 
-    public Asignatura(int codigoExterno,Tipo tipo) {
+
+    public Asignatura(Tipo tipo, int codigoExterno) {
         this("Sin nombre", 0, codigoExterno,tipo);
     }
 
@@ -39,9 +43,10 @@ public class Asignatura {
         this.tipo = tipo;
     }
 
-    public void cambiarDatos(int codigoInterno) {
+ /*    public void cambiarDatos(int codigoInterno) {
         this.codigoInterno = codigoInterno;
-    }
+    }*/
+    //elimina uno tiene la misma firma o modifica los parametros
 
     public void cambiarDatos(int codigoExterno) {
         this.codigoExterno = codigoExterno;
